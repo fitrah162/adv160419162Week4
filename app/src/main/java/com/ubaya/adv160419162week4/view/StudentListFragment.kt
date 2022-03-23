@@ -45,7 +45,7 @@ class StudentListFragment : Fragment() {
 
     private fun observeViewModel() {
         viewModel.studentsLD.observe(viewLifecycleOwner){
-            studentListAdapter.updateStudentList(it as ArrayList<Student>)
+            studentListAdapter.updateStudentList(it)
         }
         viewModel.studentLoadErrorLD.observe(viewLifecycleOwner){
             txtError.visibility = if(it) View.VISIBLE else View.GONE
